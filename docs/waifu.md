@@ -1,3 +1,3 @@
 # Miku
 
-<img src="miku.png" alt="drawing" width="200"/>
+<img src="img/miku.png" alt="drawing" width="200"/>

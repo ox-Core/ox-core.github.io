@@ -39,7 +39,7 @@ template<typename T> void AddComponent(Entity entity, T component = {})
 * **Parameters:**
 
   * `entity` — Target entity.
-  * `component` — Component instance (default constructed if omitted).
+  * `component` — Component instance (default constructor if omitted).
 * **Effects:** Adds a component `T` to `entity`.
 
 ```cpp

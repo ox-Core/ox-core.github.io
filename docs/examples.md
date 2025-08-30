@@ -1,15 +1,68 @@
-# Lorem Ipsum
+# Examples
+---
+### Simple Health Management
+This snippet of code creates a player with health and decrements until 0. It showcases most of the core functionality of the ECS portion of Acheron
+```cpp
+#include <print>
+#include <chrono>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.
+#include "acheron.hpp"
 
-## Dolor Sit Amet
+using namespace acheron;
 
-Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+// tag struct for player
+struct Player {};
 
-## Consectetur Adipiscing
+// actual health component
+struct Health {
+    float value;
+};
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+struct ShouldQuit {
+    bool value = false;
+};
 
-## Vestibulum Ante
+int main() {
+    // create the world, this is a wrapper that handles entity, component, and system managers
+    auto world = ecs::World();
 
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+    // register components like this
+    world.RegisterComponent<Player>();
+    world.RegisterComponent<Health>();
+
+    // systems can be created like this in a lambda. they take in the world, and an entity
+    // optionally you can add dt as the last argument for delta time
+    world.RegisterSystem<Player, Health>([](ecs::World& world, ecs::Entity entity) {
+        // components are BY REFERENCE, so they can be modified and changed
+        auto& health = world.GetComponent<Health>(entity);
+        health.value -= 1;
+        std::println("health: {}", health.value);
+        if(health.value <= 0) world.GetSingleton<ShouldQuit>().value = true;
+    });
+
+    // create global singleton for when the game should quit
+    world.SetSingleton<ShouldQuit>({});
+
+    // create an entity and add the components on it
+    auto player = world.Spawn();
+
+    // player is just a tag struct
+    world.AddComponent(player, Player{});
+    world.AddComponent(player, Health{ 20.0 });
+
+    // this returns a reference so when its changed it will update this, no need to call it every frame
+    auto& shouldQuit = world.GetSingleton<ShouldQuit>();
+
+    // game loop
+    auto lastTime = std::chrono::high_resolution_clock::now();
+
+    while(!shouldQuit.value) {
+        auto currentTime = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<float> elapsed = currentTime - lastTime;
+        lastTime = currentTime;
+
+        float dt = elapsed.count();
+        world.Update(dt);
+    }
+}
+```

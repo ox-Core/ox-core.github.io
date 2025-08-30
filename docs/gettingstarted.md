@@ -1,7 +1,5 @@
 # Getting Started
 
-Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+For now Acheron isnt meant for production use as it is incomplete.
 
-## More Dolor
-
-Aliquam erat volutpat. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget euismod nisi nisi euismod.
+If you **REALLY** want to use it though, you can use the [wrap](https://github.com/ox-Core/Acheron/blob/master/acheron.wrap) file provided for meson.

@@ -1,7 +1,6 @@
 [
   { "file": "gettingstarted.md", "label": "Getting Started" },
   { "file": "examples.md", "label": "Examples" },
-  { "file": "waifu.md", "label": "Waifu" },
-  { "file": "api.md", "label": "API" }
-
+  { "file": "cheatsheet.md", "label": "Cheatsheet" },
+  { "file": "waifu.md", "label": "Waifu" }
 ]

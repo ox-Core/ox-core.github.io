@@ -106,36 +106,192 @@ $(function(){initNavTree('classacheron_1_1ecs_1_1SystemManager.html',''); initRe
   <div class="headertitle"><div class="title">acheron::ecs::SystemManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Manages systems and the stages associated with them.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="system_8hpp_source.html">system.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abc319036446887f7c3972bf008e00714" id="r_abc319036446887f7c3972bf008e00714"><td class="memTemplParams" colspan="2"><a id="abc319036446887f7c3972bf008e00714" name="abc319036446887f7c3972bf008e00714"></a>
-template&lt;typename T&gt; </td></tr>
-<tr class="memitem:abc319036446887f7c3972bf008e00714"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>RegisterSystem</b> (SystemStage stage=SystemStage::Update)</td></tr>
+<tr class="memitem:abc319036446887f7c3972bf008e00714" id="r_abc319036446887f7c3972bf008e00714"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:abc319036446887f7c3972bf008e00714"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abc319036446887f7c3972bf008e00714">RegisterSystem</a> (SystemStage stage=SystemStage::Update)</td></tr>
+<tr class="memdesc:abc319036446887f7c3972bf008e00714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a system.  <br /></td></tr>
 <tr class="separator:abc319036446887f7c3972bf008e00714"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6e5aeef4d67d48b46e347fb1df8d701" id="r_ac6e5aeef4d67d48b46e347fb1df8d701"><td class="memTemplParams" colspan="2"><a id="ac6e5aeef4d67d48b46e347fb1df8d701" name="ac6e5aeef4d67d48b46e347fb1df8d701"></a>
-template&lt;typename T&gt; </td></tr>
-<tr class="memitem:ac6e5aeef4d67d48b46e347fb1df8d701"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>SetSignature</b> (Signature signature)</td></tr>
+<tr class="memitem:ac6e5aeef4d67d48b46e347fb1df8d701" id="r_ac6e5aeef4d67d48b46e347fb1df8d701"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ac6e5aeef4d67d48b46e347fb1df8d701"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac6e5aeef4d67d48b46e347fb1df8d701">SetSignature</a> (Signature signature)</td></tr>
+<tr class="memdesc:ac6e5aeef4d67d48b46e347fb1df8d701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a systems signature.  <br /></td></tr>
 <tr class="separator:ac6e5aeef4d67d48b46e347fb1df8d701"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7dfbf4492ce2a9952b8a18b479199c1" id="r_ab7dfbf4492ce2a9952b8a18b479199c1"><td class="memItemLeft" align="right" valign="top"><a id="ab7dfbf4492ce2a9952b8a18b479199c1" name="ab7dfbf4492ce2a9952b8a18b479199c1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>EntityDespawned</b> (Entity entity)</td></tr>
+<tr class="memitem:ab7dfbf4492ce2a9952b8a18b479199c1" id="r_ab7dfbf4492ce2a9952b8a18b479199c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7dfbf4492ce2a9952b8a18b479199c1">EntityDespawned</a> (Entity entity)</td></tr>
+<tr class="memdesc:ab7dfbf4492ce2a9952b8a18b479199c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when an entity is despawned.  <br /></td></tr>
 <tr class="separator:ab7dfbf4492ce2a9952b8a18b479199c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2f0f3d21774a85ba14f00ed10b8b11c" id="r_ad2f0f3d21774a85ba14f00ed10b8b11c"><td class="memItemLeft" align="right" valign="top"><a id="ad2f0f3d21774a85ba14f00ed10b8b11c" name="ad2f0f3d21774a85ba14f00ed10b8b11c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>EntitySignatureChanged</b> (Entity entity, Signature signature)</td></tr>
+<tr class="memitem:ad2f0f3d21774a85ba14f00ed10b8b11c" id="r_ad2f0f3d21774a85ba14f00ed10b8b11c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2f0f3d21774a85ba14f00ed10b8b11c">EntitySignatureChanged</a> (Entity entity, Signature signature)</td></tr>
+<tr class="memdesc:ad2f0f3d21774a85ba14f00ed10b8b11c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the system signature based on the entities new signature.  <br /></td></tr>
 <tr class="separator:ad2f0f3d21774a85ba14f00ed10b8b11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ade30c39f439f84eafb24aae5361ca33f" id="r_ade30c39f439f84eafb24aae5361ca33f"><td class="memItemLeft" align="right" valign="top"><a id="ade30c39f439f84eafb24aae5361ca33f" name="ade30c39f439f84eafb24aae5361ca33f"></a>
 std::unordered_map&lt; SystemStage, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classacheron_1_1ecs_1_1System.html">System</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>stageSystems</b></td></tr>
+<tr class="memdesc:ade30c39f439f84eafb24aae5361ca33f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A map of stages and the systems associated with them. <br /></td></tr>
 <tr class="separator:ade30c39f439f84eafb24aae5361ca33f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab228be141342222f767e34f6c03ece0" id="r_aab228be141342222f767e34f6c03ece0"><td class="memItemLeft" align="right" valign="top"><a id="aab228be141342222f767e34f6c03ece0" name="aab228be141342222f767e34f6c03ece0"></a>
 std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="classacheron_1_1ecs_1_1System.html">System</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>systems</b></td></tr>
+<tr class="memdesc:aab228be141342222f767e34f6c03ece0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A map of systems and their name. <br /></td></tr>
 <tr class="separator:aab228be141342222f767e34f6c03ece0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8945193344479146e57ad294714afd8b" id="r_a8945193344479146e57ad294714afd8b"><td class="memItemLeft" align="right" valign="top"><a id="a8945193344479146e57ad294714afd8b" name="a8945193344479146e57ad294714afd8b"></a>
 std::unordered_map&lt; std::string, Signature &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>signatures</b></td></tr>
+<tr class="memdesc:a8945193344479146e57ad294714afd8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A map of systems name and the signature associated with them. <br /></td></tr>
 <tr class="separator:a8945193344479146e57ad294714afd8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages systems and the stages associated with them. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab7dfbf4492ce2a9952b8a18b479199c1" name="ab7dfbf4492ce2a9952b8a18b479199c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7dfbf4492ce2a9952b8a18b479199c1">&#9670;&#160;</a></span>EntityDespawned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SystemManager::EntityDespawned </td>
+          <td>(</td>
+          <td class="paramtype">Entity</td>          <td class="paramname"><span class="paramname"><em>entity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when an entity is despawned. </p>
+<p>Removes the entity from the entity list that applied to the system</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>The entity that was despawned </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad2f0f3d21774a85ba14f00ed10b8b11c" name="ad2f0f3d21774a85ba14f00ed10b8b11c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2f0f3d21774a85ba14f00ed10b8b11c">&#9670;&#160;</a></span>EntitySignatureChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SystemManager::EntitySignatureChanged </td>
+          <td>(</td>
+          <td class="paramtype">Entity</td>          <td class="paramname"><span class="paramname"><em>entity</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Signature</td>          <td class="paramname"><span class="paramname"><em>signature</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the system signature based on the entities new signature. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>The entities whom system was changed </td></tr>
+    <tr><td class="paramname">signature</td><td>The new signature of the entity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abc319036446887f7c3972bf008e00714" name="abc319036446887f7c3972bf008e00714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc319036446887f7c3972bf008e00714">&#9670;&#160;</a></span>RegisterSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; T &gt; acheron::ecs::SystemManager::RegisterSystem </td>
+          <td>(</td>
+          <td class="paramtype">SystemStage</td>          <td class="paramname"><span class="paramname"><em>stage</em></span><span class="paramdefsep"> = </span><span class="paramdefval">SystemStage::Update</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Registers a system. </p>
+<p>Registers a system to its appropriate stage, and type </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The struct that should inherit from <a class="el" href="classacheron_1_1ecs_1_1System.html" title="Systems called every frame based on entities.">System</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stage</td><td>The stage at which the system should be executed</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the system registered(usually ignored) </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Assertion</td><td>Fail if T doesnt inherit system, or if already registered </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac6e5aeef4d67d48b46e347fb1df8d701" name="ac6e5aeef4d67d48b46e347fb1df8d701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6e5aeef4d67d48b46e347fb1df8d701">&#9670;&#160;</a></span>SetSignature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void acheron::ecs::SystemManager::SetSignature </td>
+          <td>(</td>
+          <td class="paramtype">Signature</td>          <td class="paramname"><span class="paramname"><em>signature</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets a systems signature. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The struct that should inherit from <a class="el" href="classacheron_1_1ecs_1_1System.html" title="Systems called every frame based on entities.">System</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">signature</td><td>The system signature to apply to T </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/ecs/<a class="el" href="system_8hpp_source.html">system.hpp</a></li>
 <li>src/ecs/<b>system.cpp</b></li>

@@ -105,13 +105,18 @@ $(function(){initNavTree('classacheron_1_1ecs_1_1SystemFunction.html',''); initR
   <div class="headertitle"><div class="title">acheron::ecs::SystemFunction&lt; Func &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Wrapper class for systems to support lambda and function pointers.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="system__function_8hpp_source.html">system_function.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for acheron::ecs::SystemFunction&lt; Func &gt;:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classacheron_1_1ecs_1_1SystemFunction.png" usemap="#acheron::ecs::SystemFunction_3C_20Func_20_3E_map" alt=""/>
   <map id="acheron::ecs::SystemFunction_3C_20Func_20_3E_map" name="acheron::ecs::SystemFunction_3C_20Func_20_3E_map">
-<area href="classacheron_1_1ecs_1_1System.html" alt="acheron::ecs::System" shape="rect" coords="0,0,233,24"/>
+<area href="classacheron_1_1ecs_1_1System.html" title="Systems called every frame based on entities." alt="acheron::ecs::System" shape="rect" coords="0,0,233,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -119,8 +124,10 @@ Inheritance diagram for acheron::ecs::SystemFunction&lt; Func &gt;:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acc5dd97bff3968b8137d8c4056c9c4da" id="r_acc5dd97bff3968b8137d8c4056c9c4da"><td class="memItemLeft" align="right" valign="top"><a id="acc5dd97bff3968b8137d8c4056c9c4da" name="acc5dd97bff3968b8137d8c4056c9c4da"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>SystemFunction</b> (Func &amp;&amp;f)</td></tr>
+<tr class="memdesc:acc5dd97bff3968b8137d8c4056c9c4da"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classacheron_1_1ecs_1_1System.html" title="Systems called every frame based on entities.">System</a> Function Wrapper. <br /></td></tr>
 <tr class="separator:acc5dd97bff3968b8137d8c4056c9c4da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe63cab79c84b58bed089d05a9de321f" id="r_afe63cab79c84b58bed089d05a9de321f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe63cab79c84b58bed089d05a9de321f">Update</a> (<a class="el" href="classacheron_1_1ecs_1_1World.html">World</a> &amp;world, double dt) override</td></tr>
+<tr class="memdesc:afe63cab79c84b58bed089d05a9de321f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterates through all entities associated with system, and call it.  <br /></td></tr>
 <tr class="separator:afe63cab79c84b58bed089d05a9de321f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -128,9 +135,19 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_classacheron_1_1ecs_1_1System"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_classacheron_1_1ecs_1_1System')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classacheron_1_1ecs_1_1System.html">acheron::ecs::System</a></td></tr>
 <tr class="memitem:ac411bd9e6451d4c7985c2cf6aea4d1eb inherit pub_attribs_classacheron_1_1ecs_1_1System" id="r_ac411bd9e6451d4c7985c2cf6aea4d1eb"><td class="memItemLeft" align="right" valign="top">
 std::unordered_set&lt; Entity &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>entities</b></td></tr>
+<tr class="memdesc:ac411bd9e6451d4c7985c2cf6aea4d1eb inherit pub_attribs_classacheron_1_1ecs_1_1System"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of entities a system is matched with. <br /></td></tr>
 <tr class="separator:ac411bd9e6451d4c7985c2cf6aea4d1eb inherit pub_attribs_classacheron_1_1ecs_1_1System"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Func&gt;<br />
+class acheron::ecs::SystemFunction&lt; Func &gt;</div><p>Wrapper class for systems to support lambda and function pointers. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Func</td><td><a class="el" href="classacheron_1_1ecs_1_1System.html" title="Systems called every frame based on entities.">System</a> callback </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afe63cab79c84b58bed089d05a9de321f" name="afe63cab79c84b58bed089d05a9de321f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe63cab79c84b58bed089d05a9de321f">&#9670;&#160;</a></span>Update()</h2>
 
@@ -160,7 +177,16 @@ template&lt;typename Func&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classacheron_1_1ecs_1_1System.html">acheron::ecs::System</a>.</p>
+<p>Iterates through all entities associated with system, and call it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world</td><td>A reference to the <a class="el" href="classacheron_1_1ecs_1_1World.html" title="Central context for the ECS.">World</a> </td></tr>
+    <tr><td class="paramname">dt</td><td>Delta Time </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classacheron_1_1ecs_1_1System.html#aaad9aab10e6e09b1d03d6ad0861b78f6">acheron::ecs::System</a>.</p>
 
 </div>
 </div>

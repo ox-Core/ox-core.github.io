@@ -105,33 +105,272 @@ $(function(){initNavTree('classacheron_1_1ecs_1_1ComponentManager.html',''); ini
   <div class="headertitle"><div class="title">acheron::ecs::ComponentManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Manages registered components and its arrays.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="component_8hpp_source.html">component.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a818631a256e1d943e86578c882c6017b" id="r_a818631a256e1d943e86578c882c6017b"><td class="memTemplParams" colspan="2"><a id="a818631a256e1d943e86578c882c6017b" name="a818631a256e1d943e86578c882c6017b"></a>
-template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a818631a256e1d943e86578c882c6017b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>RegisterComponent</b> ()</td></tr>
+<tr class="memitem:a818631a256e1d943e86578c882c6017b" id="r_a818631a256e1d943e86578c882c6017b"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a818631a256e1d943e86578c882c6017b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a818631a256e1d943e86578c882c6017b">RegisterComponent</a> ()</td></tr>
+<tr class="memdesc:a818631a256e1d943e86578c882c6017b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a component type creating a <a class="el" href="classacheron_1_1ecs_1_1ComponentArray.html" title="Container for components.">ComponentArray</a> and an ID.  <br /></td></tr>
 <tr class="separator:a818631a256e1d943e86578c882c6017b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a936d9c27a47be3970e8fbda01ea1a6e2" id="r_a936d9c27a47be3970e8fbda01ea1a6e2"><td class="memTemplParams" colspan="2"><a id="a936d9c27a47be3970e8fbda01ea1a6e2" name="a936d9c27a47be3970e8fbda01ea1a6e2"></a>
-template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a936d9c27a47be3970e8fbda01ea1a6e2"><td class="memTemplItemLeft" align="right" valign="top">ComponentID&#160;</td><td class="memTemplItemRight" valign="bottom"><b>GetComponentID</b> ()</td></tr>
+<tr class="memitem:a936d9c27a47be3970e8fbda01ea1a6e2" id="r_a936d9c27a47be3970e8fbda01ea1a6e2"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a936d9c27a47be3970e8fbda01ea1a6e2"><td class="memTemplItemLeft" align="right" valign="top">ComponentID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a936d9c27a47be3970e8fbda01ea1a6e2">GetComponentID</a> ()</td></tr>
+<tr class="memdesc:a936d9c27a47be3970e8fbda01ea1a6e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the ID of a component.  <br /></td></tr>
 <tr class="separator:a936d9c27a47be3970e8fbda01ea1a6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b3bd2600e8f78b935abc494ac9bd481" id="r_a5b3bd2600e8f78b935abc494ac9bd481"><td class="memTemplParams" colspan="2"><a id="a5b3bd2600e8f78b935abc494ac9bd481" name="a5b3bd2600e8f78b935abc494ac9bd481"></a>
-template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a5b3bd2600e8f78b935abc494ac9bd481"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>AddComponent</b> (Entity entity, T component)</td></tr>
+<tr class="memitem:a5b3bd2600e8f78b935abc494ac9bd481" id="r_a5b3bd2600e8f78b935abc494ac9bd481"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a5b3bd2600e8f78b935abc494ac9bd481"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5b3bd2600e8f78b935abc494ac9bd481">AddComponent</a> (Entity entity, T component)</td></tr>
+<tr class="memdesc:a5b3bd2600e8f78b935abc494ac9bd481"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a component and its data to an entity.  <br /></td></tr>
 <tr class="separator:a5b3bd2600e8f78b935abc494ac9bd481"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a102dddd4079ae928554a910c296bf3bc" id="r_a102dddd4079ae928554a910c296bf3bc"><td class="memTemplParams" colspan="2"><a id="a102dddd4079ae928554a910c296bf3bc" name="a102dddd4079ae928554a910c296bf3bc"></a>
-template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a102dddd4079ae928554a910c296bf3bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>RemoveComponent</b> (Entity entity)</td></tr>
+<tr class="memitem:a102dddd4079ae928554a910c296bf3bc" id="r_a102dddd4079ae928554a910c296bf3bc"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a102dddd4079ae928554a910c296bf3bc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a102dddd4079ae928554a910c296bf3bc">RemoveComponent</a> (Entity entity)</td></tr>
+<tr class="memdesc:a102dddd4079ae928554a910c296bf3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a component and its data from an entity.  <br /></td></tr>
 <tr class="separator:a102dddd4079ae928554a910c296bf3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4525e210538d162a2a6974e6e6dd7cb2" id="r_a4525e210538d162a2a6974e6e6dd7cb2"><td class="memTemplParams" colspan="2"><a id="a4525e210538d162a2a6974e6e6dd7cb2" name="a4525e210538d162a2a6974e6e6dd7cb2"></a>
-template&lt;typename T&gt; </td></tr>
-<tr class="memitem:a4525e210538d162a2a6974e6e6dd7cb2"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>GetComponent</b> (Entity entity)</td></tr>
+<tr class="memitem:a4525e210538d162a2a6974e6e6dd7cb2" id="r_a4525e210538d162a2a6974e6e6dd7cb2"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a4525e210538d162a2a6974e6e6dd7cb2"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4525e210538d162a2a6974e6e6dd7cb2">GetComponent</a> (Entity entity)</td></tr>
+<tr class="memdesc:a4525e210538d162a2a6974e6e6dd7cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get components data associated with an entity.  <br /></td></tr>
 <tr class="separator:a4525e210538d162a2a6974e6e6dd7cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93d2668e870afb66b16d1c3516245f8a" id="r_a93d2668e870afb66b16d1c3516245f8a"><td class="memItemLeft" align="right" valign="top"><a id="a93d2668e870afb66b16d1c3516245f8a" name="a93d2668e870afb66b16d1c3516245f8a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>EntityDespawned</b> (Entity entity)</td></tr>
+<tr class="memitem:a93d2668e870afb66b16d1c3516245f8a" id="r_a93d2668e870afb66b16d1c3516245f8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93d2668e870afb66b16d1c3516245f8a">EntityDespawned</a> (Entity entity)</td></tr>
+<tr class="memdesc:a93d2668e870afb66b16d1c3516245f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove components associated with an entity.  <br /></td></tr>
 <tr class="separator:a93d2668e870afb66b16d1c3516245f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages registered components and its arrays. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5b3bd2600e8f78b935abc494ac9bd481" name="a5b3bd2600e8f78b935abc494ac9bd481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b3bd2600e8f78b935abc494ac9bd481">&#9670;&#160;</a></span>AddComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void acheron::ecs::ComponentManager::AddComponent </td>
+          <td>(</td>
+          <td class="paramtype">Entity</td>          <td class="paramname"><span class="paramname"><em>entity</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>component</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds a component and its data to an entity. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The component type to add to the entity </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>The entity to add a component and its data for </td></tr>
+    <tr><td class="paramname">component</td><td>The components data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a93d2668e870afb66b16d1c3516245f8a" name="a93d2668e870afb66b16d1c3516245f8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93d2668e870afb66b16d1c3516245f8a">&#9670;&#160;</a></span>EntityDespawned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ComponentManager::EntityDespawned </td>
+          <td>(</td>
+          <td class="paramtype">Entity</td>          <td class="paramname"><span class="paramname"><em>entity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove components associated with an entity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>Entity to remove components from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4525e210538d162a2a6974e6e6dd7cb2" name="a4525e210538d162a2a6974e6e6dd7cb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4525e210538d162a2a6974e6e6dd7cb2">&#9670;&#160;</a></span>GetComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; acheron::ecs::ComponentManager::GetComponent </td>
+          <td>(</td>
+          <td class="paramtype">Entity</td>          <td class="paramname"><span class="paramname"><em>entity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get components data associated with an entity. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The component type to get the data for from an entity</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Component data associated with the entity </dd></dl>
+
+</div>
+</div>
+<a id="a936d9c27a47be3970e8fbda01ea1a6e2" name="a936d9c27a47be3970e8fbda01ea1a6e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a936d9c27a47be3970e8fbda01ea1a6e2">&#9670;&#160;</a></span>GetComponentID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ComponentID acheron::ecs::ComponentManager::GetComponentID </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the ID of a component. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The component to get the ID for</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The ID for the component </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Assert</td><td>Fail if the component wasnt registered yet </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a818631a256e1d943e86578c882c6017b" name="a818631a256e1d943e86578c882c6017b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a818631a256e1d943e86578c882c6017b">&#9670;&#160;</a></span>RegisterComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void acheron::ecs::ComponentManager::RegisterComponent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Registers a component type creating a <a class="el" href="classacheron_1_1ecs_1_1ComponentArray.html" title="Container for components.">ComponentArray</a> and an ID. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The component type to be registered</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Assert</td><td>Fail if the component was already registered </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a102dddd4079ae928554a910c296bf3bc" name="a102dddd4079ae928554a910c296bf3bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a102dddd4079ae928554a910c296bf3bc">&#9670;&#160;</a></span>RemoveComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void acheron::ecs::ComponentManager::RemoveComponent </td>
+          <td>(</td>
+          <td class="paramtype">Entity</td>          <td class="paramname"><span class="paramname"><em>entity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes a component and its data from an entity. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The component type to remove from the entity </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity</td><td>The entity to remove a component and its data for </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/ecs/<a class="el" href="component_8hpp_source.html">component.hpp</a></li>
 <li>src/ecs/<b>component.cpp</b></li>

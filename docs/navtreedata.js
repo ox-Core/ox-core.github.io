@@ -25,13 +25,18 @@
 var NAVTREE =
 [
   [ "Acheron", "index.html", [
+    [ "Welcome", "index.html", null ],
+    [ "Examples", "md_docs_2Examples.html", [
+      [ "Health", "md_docs_2Examples.html#autotoc_md1", null ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [

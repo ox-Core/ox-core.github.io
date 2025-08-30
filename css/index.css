@@ -83,6 +83,23 @@ html {
         position: relative;
         top: auto;
         margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .docs-sidebar nav {
+        margin-top: 1rem;
+        text-align: center;
+    }
+    .docs-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+    }
+    .docs-list-item {
+        width: fit-content;
+        margin: 0 auto 0.25rem auto;
+        text-align: center;
     }
     .docs-content {
         padding: 2rem 1rem;
@@ -123,6 +140,7 @@ html {
         right: auto;
         top: 0;
         height: 100vh;
+        min-height: 100vh;
         width: 220px;
         z-index: 1000;
         background: hsl(var(--card));
@@ -134,6 +152,7 @@ html {
         overflow-y: auto;
         overscroll-behavior: contain;
         touch-action: pan-y;
+        bottom: 0;
     }
     body.sidebar-open .docs-sidebar {
         left: 0;
@@ -432,11 +451,23 @@ footer {
     justify-content: center;
 }
 
+body:not(.docs-page) footer {
+    margin-left: 0;
+    width: 100%;
+}
+
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
+}
+
+body:not(.docs-page) .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
 }
 
 .footer-section h4 {

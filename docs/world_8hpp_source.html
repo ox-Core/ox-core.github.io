@@ -104,177 +104,230 @@ $(function(){initNavTree('world_8hpp_source.html',''); initResizable(true); });
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;ecs/module.hpp&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;ecs/system_function.hpp&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;ecs/types.hpp&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;system.hpp&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;component.hpp&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;entity.hpp&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;any&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;typeindex&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>acheron::ecs {</div>
-<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html">   19</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#afa39d4e6f714a7a3691ac0c656f5e8a8">World</a> {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#afa39d4e6f714a7a3691ac0c656f5e8a8">World</a>();</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        Entity <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a92d122dd9b2584e124677473a9773e0e">Spawn</a>();</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a1d3754ff286be35491b089e43fb66aab">Despawn</a>(Entity entity);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#a71a31042aa7ece4ff32e46041e275d5f">   44</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a71a31042aa7ece4ff32e46041e275d5f">RegisterComponent</a>() {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            componentManager-&gt;RegisterComponent&lt;T&gt;();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;module.hpp&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;system_function.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;types.hpp&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;event.hpp&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;system.hpp&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;component.hpp&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;entity.hpp&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;any&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;typeindex&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span>acheron::ecs {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">class </span><a class="code hl_class" href="classacheron_1_1ecs_1_1EntityBuilder.html">EntityBuilder</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html">   23</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#afa39d4e6f714a7a3691ac0c656f5e8a8">World</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#afa39d4e6f714a7a3691ac0c656f5e8a8">World</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_class" href="classacheron_1_1ecs_1_1EntityBuilder.html">EntityBuilder</a> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a56e88c6870eb442bc25a5416d2777517">Spawn</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a1d3754ff286be35491b089e43fb66aab">Despawn</a>(Entity entity);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#a71a31042aa7ece4ff32e46041e275d5f">   48</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a71a31042aa7ece4ff32e46041e275d5f">RegisterComponent</a>() {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            componentManager-&gt;RegisterComponent&lt;T&gt;();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
 </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#ad92190ea42b5c91706c1d7bbabd5fb29">   58</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#ad92190ea42b5c91706c1d7bbabd5fb29">AddComponent</a>(Entity entity, T component = {}) {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            componentManager-&gt;AddComponent&lt;T&gt;(entity, component);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keyword">auto</span> signature = entityManager-&gt;GetSignature(entity);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            signature.insert(componentManager-&gt;GetComponentID&lt;T&gt;());</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            entityManager-&gt;SetSignature(entity, signature);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>         <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#a06d359872a24da42f477a40edcfa1de0">   62</a></span>         <span class="keywordtype">void</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a06d359872a24da42f477a40edcfa1de0">AddComponent</a>(Entity entity, Args&amp;&amp;... args) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>             componentManager-&gt;AddComponent&lt;T&gt;(entity, T(std::forward&lt;Args&gt;(args)...));</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            systemManager-&gt;EntitySignatureChanged(entity, signature);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keyword">auto</span> signature = entityManager-&gt;GetSignature(entity);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            signature.insert(componentManager-&gt;GetComponentID&lt;T&gt;());</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            entityManager-&gt;SetSignature(entity, signature);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            systemManager-&gt;EntitySignatureChanged(entity, signature);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
 </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#a0b8f4974199c7620b93c3cff0ae57e47">   77</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a0b8f4974199c7620b93c3cff0ae57e47">RemoveComponent</a>(Entity entity) {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            componentManager-&gt;RemoveComponent&lt;T&gt;(entity);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keyword">auto</span> signature = entityManager-&gt;GetSignature(entity);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            signature.erase(componentManager-&gt;GetComponentID&lt;T&gt;());</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            entityManager-&gt;SetSignature(entity, signature);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#a0b8f4974199c7620b93c3cff0ae57e47">   81</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a0b8f4974199c7620b93c3cff0ae57e47">RemoveComponent</a>(Entity entity) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            componentManager-&gt;RemoveComponent&lt;T&gt;(entity);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            systemManager-&gt;EntitySignatureChanged(entity, signature);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keyword">auto</span> signature = entityManager-&gt;GetSignature(entity);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            signature.erase(componentManager-&gt;GetComponentID&lt;T&gt;());</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            entityManager-&gt;SetSignature(entity, signature);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            systemManager-&gt;EntitySignatureChanged(entity, signature);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
 </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#ae5d6d3de474b2b651441a34086bb628a">   94</a></span>        T&amp; <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#ae5d6d3de474b2b651441a34086bb628a">GetComponent</a>(Entity entity)  {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">return</span> componentManager-&gt;GetComponent&lt;T&gt;(entity);</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#ae5d6d3de474b2b651441a34086bb628a">   98</a></span>        T&amp; <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#ae5d6d3de474b2b651441a34086bb628a">GetComponent</a>(Entity entity)  {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="keywordflow">return</span> componentManager-&gt;GetComponent&lt;T&gt;(entity);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        }</div>
 </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#aa5394c06ec4e249fb103aabb805f8f04">  104</a></span>        ComponentID <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#aa5394c06ec4e249fb103aabb805f8f04">GetComponentID</a>() {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">return</span> componentManager-&gt;GetComponentID&lt;T&gt;();</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#aa5394c06ec4e249fb103aabb805f8f04">  108</a></span>        ComponentID <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#aa5394c06ec4e249fb103aabb805f8f04">GetComponentID</a>() {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">return</span> componentManager-&gt;GetComponentID&lt;T&gt;();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        }</div>
 </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Components&gt;</div>
-<div class="foldopen" id="foldopen00114" data-start="{" data-end="}">
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#a3b469d927ff15a3c699b74ad0b459f80">  114</a></span>        Signature <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a3b469d927ff15a3c699b74ad0b459f80">MakeSignature</a>() {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            Signature signature;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            (signature.insert(<a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#aa5394c06ec4e249fb103aabb805f8f04">GetComponentID&lt;Components&gt;</a>()), ...);</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="keywordflow">return</span> signature;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Components&gt;</div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#a3b469d927ff15a3c699b74ad0b459f80">  118</a></span>        Signature <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a3b469d927ff15a3c699b74ad0b459f80">MakeSignature</a>() {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            Signature signature;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            (signature.insert(<a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#aa5394c06ec4e249fb103aabb805f8f04">GetComponentID&lt;Components&gt;</a>()), ...);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">return</span> signature;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        }</div>
 </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00129" data-start="{" data-end="}">
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#a2d048c599dbede96b4e7681fb1f0e668">  129</a></span>        std::shared_ptr&lt;T&gt; <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a2d048c599dbede96b4e7681fb1f0e668">RegisterSystem</a>(Signature signature = {}, SystemStage stage = SystemStage::Update) {</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <span class="keyword">auto</span> system = systemManager-&gt;RegisterSystem&lt;T&gt;(stage);</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a03369f030030055fb7ec8eaba39ba2ed">SetSystemSignature&lt;T&gt;</a>(signature);</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <span class="keywordflow">return</span> system;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#a2d048c599dbede96b4e7681fb1f0e668">  133</a></span>        std::shared_ptr&lt;T&gt; <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a2d048c599dbede96b4e7681fb1f0e668">RegisterSystem</a>(Signature signature = {}, SystemStage stage = SystemStage::Update) {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keyword">auto</span> system = systemManager-&gt;RegisterSystem&lt;T&gt;(stage);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a03369f030030055fb7ec8eaba39ba2ed">SetSystemSignature&lt;T&gt;</a>(signature);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            <span class="keywordflow">return</span> system;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        }</div>
 </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Func&gt;</div>
-<div class="foldopen" id="foldopen00147" data-start="{" data-end="}">
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#ab254fa1af788e4a751dc2f8be843d04e">  147</a></span>        std::shared_ptr&lt;System&gt; <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#ab254fa1af788e4a751dc2f8be843d04e">RegisterSystemExplicit</a>(Func&amp;&amp; func, Signature signature = {}, SystemStage stage = SystemStage::Update) {</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <span class="keyword">using </span>SystemType = <a class="code hl_class" href="classacheron_1_1ecs_1_1SystemFunction.html">SystemFunction&lt;std::decay_t&lt;Func&gt;</a>&gt;;</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <span class="keyword">auto</span> systemFunc = std::make_shared&lt;SystemType&gt;(std::forward&lt;Func&gt;(func));</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            <span class="keyword">static</span> <span class="keywordtype">int</span> counter = 0;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            std::string typeName = <span class="stringliteral">&quot;LambdaSystem_&quot;</span> + std::to_string(counter++);</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            systemManager-&gt;systems[typeName] = systemFunc;</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            systemManager-&gt;signatures[typeName] = signature;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            systemManager-&gt;stageSystems[stage].push_back(systemFunc);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Func&gt;</div>
+<div class="foldopen" id="foldopen00151" data-start="{" data-end="}">
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#ab254fa1af788e4a751dc2f8be843d04e">  151</a></span>        std::shared_ptr&lt;System&gt; <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#ab254fa1af788e4a751dc2f8be843d04e">RegisterSystemExplicit</a>(Func&amp;&amp; func, Signature signature = {}, SystemStage stage = SystemStage::Update) {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            <span class="keyword">using </span>SystemType = <a class="code hl_class" href="classacheron_1_1ecs_1_1SystemFunction.html">SystemFunction&lt;std::decay_t&lt;Func&gt;</a>&gt;;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            <span class="keyword">auto</span> systemFunc = std::make_shared&lt;SystemType&gt;(std::forward&lt;Func&gt;(func));</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="keyword">static</span> <span class="keywordtype">int</span> counter = 0;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            std::string typeName = <span class="stringliteral">&quot;LambdaSystem_&quot;</span> + std::to_string(counter++);</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <span class="keywordflow">return</span> systemFunc;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            systemManager-&gt;systems[typeName] = systemFunc;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            systemManager-&gt;signatures[typeName] = signature;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            systemManager-&gt;stageSystems[stage].push_back(systemFunc);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <span class="keywordflow">return</span> systemFunc;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        }</div>
 </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span></div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Components, <span class="keyword">typename</span> Func&gt;</div>
-<div class="foldopen" id="foldopen00178" data-start="{" data-end="}">
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#a53ce39e02c5e844d1a9b504e3aeaaf97">  178</a></span>        std::shared_ptr&lt;System&gt; <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a53ce39e02c5e844d1a9b504e3aeaaf97">RegisterSystem</a>(Func&amp;&amp; func, SystemStage stage = SystemStage::Update) {</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            <span class="keyword">auto</span> signature = <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a3b469d927ff15a3c699b74ad0b459f80">MakeSignature</a>&lt;Components...&gt;();</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#ab254fa1af788e4a751dc2f8be843d04e">RegisterSystemExplicit</a>(std::forward&lt;Func&gt;(func), signature, stage);</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Components, <span class="keyword">typename</span> Func&gt;</div>
+<div class="foldopen" id="foldopen00182" data-start="{" data-end="}">
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#a53ce39e02c5e844d1a9b504e3aeaaf97">  182</a></span>        std::shared_ptr&lt;System&gt; <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a53ce39e02c5e844d1a9b504e3aeaaf97">RegisterSystem</a>(Func&amp;&amp; func, SystemStage stage = SystemStage::Update) {</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <span class="keyword">auto</span> signature = <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a3b469d927ff15a3c699b74ad0b459f80">MakeSignature</a>&lt;Components...&gt;();</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#ab254fa1af788e4a751dc2f8be843d04e">RegisterSystemExplicit</a>(std::forward&lt;Func&gt;(func), signature, stage);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        }</div>
 </div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00189" data-start="{" data-end="}">
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#a03369f030030055fb7ec8eaba39ba2ed">  189</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a03369f030030055fb7ec8eaba39ba2ed">SetSystemSignature</a>(Signature signature) {</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            systemManager-&gt;SetSignature&lt;T&gt;(signature);</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        }</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00193" data-start="{" data-end="}">
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#a03369f030030055fb7ec8eaba39ba2ed">  193</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a03369f030030055fb7ec8eaba39ba2ed">SetSystemSignature</a>(Signature signature) {</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            systemManager-&gt;SetSignature&lt;T&gt;(signature);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        }</div>
 </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span></div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00199" data-start="{" data-end="}">
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#a5ff7de593e6aeb4a1e46f2e8b599127e">  199</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a5ff7de593e6aeb4a1e46f2e8b599127e">SetSingleton</a>(T value) {</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            singletons[<span class="keyword">typeid</span>(T)] = std::move(value);</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        }</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00203" data-start="{" data-end="}">
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#a5ff7de593e6aeb4a1e46f2e8b599127e">  203</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a5ff7de593e6aeb4a1e46f2e8b599127e">SetSingleton</a>(T value) {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            singletons[<span class="keyword">typeid</span>(T)] = std::move(value);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        }</div>
 </div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span></div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00210" data-start="{" data-end="}">
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#aa4a99d0d379c54e5fb0996ef8fa54233">  210</a></span>        T&amp; <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#aa4a99d0d379c54e5fb0996ef8fa54233">GetSingleton</a>() {</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            <span class="keyword">auto</span> it = singletons.find(<span class="keyword">typeid</span>(T));</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            assert(it != singletons.end() &amp;&amp; <span class="stringliteral">&quot;Singleton does not exist&quot;</span>);</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            <span class="keywordflow">return</span> std::any_cast&lt;T&amp;&gt;(it-&gt;second);</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        }</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00214" data-start="{" data-end="}">
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#aa4a99d0d379c54e5fb0996ef8fa54233">  214</a></span>        T&amp; <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#aa4a99d0d379c54e5fb0996ef8fa54233">GetSingleton</a>() {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            <span class="keyword">auto</span> it = singletons.find(<span class="keyword">typeid</span>(T));</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>            assert(it != singletons.end() &amp;&amp; <span class="stringliteral">&quot;Singleton does not exist&quot;</span>);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            <span class="keywordflow">return</span> std::any_cast&lt;T&amp;&gt;(it-&gt;second);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        }</div>
 </div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span></div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00223" data-start="{" data-end="}">
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#aca884c45f7653faecf43a5ade2d74b6e">  223</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#aca884c45f7653faecf43a5ade2d74b6e">Import</a>() {</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            <span class="keyword">static_assert</span>(std::is_base_of&lt;Module, T&gt;::value, <span class="stringliteral">&quot;Import must inherit from Module&quot;</span>);</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <span class="keyword">auto</span> <span class="keyword">module</span> = T{};</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <span class="keyword">module</span>.Register(*this);</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        }</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00227" data-start="{" data-end="}">
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#aca884c45f7653faecf43a5ade2d74b6e">  227</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#aca884c45f7653faecf43a5ade2d74b6e">Import</a>() {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            <span class="keyword">static_assert</span>(std::is_base_of&lt;Module, T&gt;::value, <span class="stringliteral">&quot;Import must inherit from Module&quot;</span>);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            <span class="keyword">auto</span> <span class="keyword">module</span> = T{};</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            <span class="keyword">module</span>.Register(*this);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        }</div>
 </div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span></div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <span class="keywordtype">void</span> Update(<span class="keywordtype">double</span> dt = 0.0);</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <span class="keywordtype">int</span> counter = 0; </div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        <span class="keywordtype">bool</span> hasStarted = <span class="keyword">false</span>; </div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        std::unique_ptr&lt;EntityManager&gt; entityManager; </div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        std::unique_ptr&lt;ComponentManager&gt; componentManager; </div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        std::unique_ptr&lt;SystemManager&gt; systemManager; </div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        std::unordered_map&lt;std::type_index, std::any&gt; singletons; </div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    };</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00241" data-start="{" data-end="}">
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#a9356f42f5cf216fa52ab2a8c4f24c86f">  241</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#a9356f42f5cf216fa52ab2a8c4f24c86f">SubscribeEvent</a>(<a class="code hl_typedef" href="classacheron_1_1ecs_1_1EventManager.html#a6ae1bc2347fe0004ea1240a579e0b71a">EventManager::Callback&lt;T&gt;</a> cb) {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            eventManager-&gt;Subscribe&lt;T&gt;(*<span class="keyword">this</span>, cb);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        }</div>
 </div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>}</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00252" data-start="{" data-end="}">
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#aa176fe32114061262149208f8500f1a5">  252</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#aa176fe32114061262149208f8500f1a5">EmitEvent</a>(<span class="keyword">const</span> T&amp; event) {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            eventManager-&gt;Emit&lt;T&gt;(event);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        }</div>
+</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span></div>
+<div class="foldopen" id="foldopen00259" data-start="{" data-end="}">
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1World.html#ac5ddcb89467217062403c1edc00c9125">  259</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classacheron_1_1ecs_1_1World.html#ac5ddcb89467217062403c1edc00c9125">DispatchEvents</a>() {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            eventManager-&gt;Dispatch();</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        }</div>
+</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <span class="keywordtype">void</span> Update(<span class="keywordtype">double</span> dt = 0.0);</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <span class="keywordtype">int</span> counter = 0; </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        <span class="keywordtype">bool</span> hasStarted = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        std::unique_ptr&lt;EntityManager&gt; entityManager; </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        std::unique_ptr&lt;ComponentManager&gt; componentManager; </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        std::unique_ptr&lt;SystemManager&gt; systemManager; </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        std::unique_ptr&lt;EventManager&gt; eventManager; </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        std::unordered_map&lt;std::type_index, std::any&gt; singletons; </div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    };</div>
+</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span></div>
+<div class="foldopen" id="foldopen00289" data-start="{" data-end="};">
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1EntityBuilder.html">  289</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classacheron_1_1ecs_1_1EntityBuilder.html#a400d3362176b0cf9280737bda82b2b0a">EntityBuilder</a> {</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        <a class="code hl_class" href="classacheron_1_1ecs_1_1World.html">World</a>&amp; world; </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        ecs::Entity entity; </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1EntityBuilder.html#a400d3362176b0cf9280737bda82b2b0a">  297</a></span>        <a class="code hl_function" href="classacheron_1_1ecs_1_1EntityBuilder.html#a400d3362176b0cf9280737bda82b2b0a">EntityBuilder</a>(<a class="code hl_class" href="classacheron_1_1ecs_1_1World.html">World</a>&amp; w, ecs::Entity e) : world(w), entity(e) {}</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span></div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00310" data-start="{" data-end="}">
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1EntityBuilder.html#abc87e70828446675a40ee706fca28fd5">  310</a></span>        <a class="code hl_function" href="classacheron_1_1ecs_1_1EntityBuilder.html#a400d3362176b0cf9280737bda82b2b0a">EntityBuilder</a>&amp; <a class="code hl_function" href="classacheron_1_1ecs_1_1EntityBuilder.html#abc87e70828446675a40ee706fca28fd5">Add</a>(Args&amp;&amp;... args) {</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>            world.AddComponent&lt;T&gt;(entity, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        }</div>
+</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno"><a class="line" href="classacheron_1_1ecs_1_1EntityBuilder.html#a724ba3670db11634459ca644a9603ec1">  315</a></span>        <span class="keyword">operator</span> ecs::Entity()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> entity; } </div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    };</div>
+</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>}</div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1EntityBuilder_html"><div class="ttname"><a href="classacheron_1_1ecs_1_1EntityBuilder.html">acheron::ecs::EntityBuilder</a></div><div class="ttdoc">Wrapper for spawning entities using method-chaining.</div><div class="ttdef"><b>Definition</b> world.hpp:289</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1EntityBuilder_html_a400d3362176b0cf9280737bda82b2b0a"><div class="ttname"><a href="classacheron_1_1ecs_1_1EntityBuilder.html#a400d3362176b0cf9280737bda82b2b0a">acheron::ecs::EntityBuilder::EntityBuilder</a></div><div class="ttdeci">EntityBuilder(World &amp;w, ecs::Entity e)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> world.hpp:297</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1EntityBuilder_html_abc87e70828446675a40ee706fca28fd5"><div class="ttname"><a href="classacheron_1_1ecs_1_1EntityBuilder.html#abc87e70828446675a40ee706fca28fd5">acheron::ecs::EntityBuilder::Add</a></div><div class="ttdeci">EntityBuilder &amp; Add(Args &amp;&amp;... args)</div><div class="ttdoc">Where the real magic happens.</div><div class="ttdef"><b>Definition</b> world.hpp:310</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1EventManager_html_a6ae1bc2347fe0004ea1240a579e0b71a"><div class="ttname"><a href="classacheron_1_1ecs_1_1EventManager.html#a6ae1bc2347fe0004ea1240a579e0b71a">acheron::ecs::EventManager::Callback</a></div><div class="ttdeci">std::function&lt; void(World &amp;, const T &amp;)&gt; Callback</div><div class="ttdoc">Function signature for event callbacks.</div><div class="ttdef"><b>Definition</b> event.hpp:29</div></div>
 <div class="ttc" id="aclassacheron_1_1ecs_1_1SystemFunction_html"><div class="ttname"><a href="classacheron_1_1ecs_1_1SystemFunction.html">acheron::ecs::SystemFunction</a></div><div class="ttdoc">Wrapper class for systems to support lambda and function pointers.</div><div class="ttdef"><b>Definition</b> system_function.hpp:17</div></div>
-<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a03369f030030055fb7ec8eaba39ba2ed"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a03369f030030055fb7ec8eaba39ba2ed">acheron::ecs::World::SetSystemSignature</a></div><div class="ttdeci">void SetSystemSignature(Signature signature)</div><div class="ttdoc">Sets the component signature for a system.</div><div class="ttdef"><b>Definition</b> world.hpp:189</div></div>
-<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a0b8f4974199c7620b93c3cff0ae57e47"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a0b8f4974199c7620b93c3cff0ae57e47">acheron::ecs::World::RemoveComponent</a></div><div class="ttdeci">void RemoveComponent(Entity entity)</div><div class="ttdoc">Removes a component from an entity.</div><div class="ttdef"><b>Definition</b> world.hpp:77</div></div>
-<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a1d3754ff286be35491b089e43fb66aab"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a1d3754ff286be35491b089e43fb66aab">acheron::ecs::World::Despawn</a></div><div class="ttdeci">void Despawn(Entity entity)</div><div class="ttdoc">Despawns(destroys) an entity Cleans up all associated components and notifies systems.</div><div class="ttdef"><b>Definition</b> world.cpp:17</div></div>
-<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a2d048c599dbede96b4e7681fb1f0e668"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a2d048c599dbede96b4e7681fb1f0e668">acheron::ecs::World::RegisterSystem</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; RegisterSystem(Signature signature={}, SystemStage stage=SystemStage::Update)</div><div class="ttdoc">Registers a system of type T.</div><div class="ttdef"><b>Definition</b> world.hpp:129</div></div>
-<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a3b469d927ff15a3c699b74ad0b459f80"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a3b469d927ff15a3c699b74ad0b459f80">acheron::ecs::World::MakeSignature</a></div><div class="ttdeci">Signature MakeSignature()</div><div class="ttdoc">Creates a signature that includes all specified component types.</div><div class="ttdef"><b>Definition</b> world.hpp:114</div></div>
-<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a53ce39e02c5e844d1a9b504e3aeaaf97"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a53ce39e02c5e844d1a9b504e3aeaaf97">acheron::ecs::World::RegisterSystem</a></div><div class="ttdeci">std::shared_ptr&lt; System &gt; RegisterSystem(Func &amp;&amp;func, SystemStage stage=SystemStage::Update)</div><div class="ttdoc">Registers a system from a lambda or callable with component type deduction.</div><div class="ttdef"><b>Definition</b> world.hpp:178</div></div>
-<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a5ff7de593e6aeb4a1e46f2e8b599127e"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a5ff7de593e6aeb4a1e46f2e8b599127e">acheron::ecs::World::SetSingleton</a></div><div class="ttdeci">void SetSingleton(T value)</div><div class="ttdoc">Stores a singleton instance in the world.</div><div class="ttdef"><b>Definition</b> world.hpp:199</div></div>
-<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a71a31042aa7ece4ff32e46041e275d5f"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a71a31042aa7ece4ff32e46041e275d5f">acheron::ecs::World::RegisterComponent</a></div><div class="ttdeci">void RegisterComponent()</div><div class="ttdoc">Registers a new component type with the ECS.</div><div class="ttdef"><b>Definition</b> world.hpp:44</div></div>
-<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a92d122dd9b2584e124677473a9773e0e"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a92d122dd9b2584e124677473a9773e0e">acheron::ecs::World::Spawn</a></div><div class="ttdeci">Entity Spawn()</div><div class="ttdoc">Spawns a new entity.</div><div class="ttdef"><b>Definition</b> world.cpp:13</div></div>
-<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_aa4a99d0d379c54e5fb0996ef8fa54233"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#aa4a99d0d379c54e5fb0996ef8fa54233">acheron::ecs::World::GetSingleton</a></div><div class="ttdeci">T &amp; GetSingleton()</div><div class="ttdoc">Retrieves a singleton instance from the world.</div><div class="ttdef"><b>Definition</b> world.hpp:210</div></div>
-<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_aa5394c06ec4e249fb103aabb805f8f04"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#aa5394c06ec4e249fb103aabb805f8f04">acheron::ecs::World::GetComponentID</a></div><div class="ttdeci">ComponentID GetComponentID()</div><div class="ttdoc">Retrieves the unique ID associated with a component type.</div><div class="ttdef"><b>Definition</b> world.hpp:104</div></div>
-<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_ab254fa1af788e4a751dc2f8be843d04e"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#ab254fa1af788e4a751dc2f8be843d04e">acheron::ecs::World::RegisterSystemExplicit</a></div><div class="ttdeci">std::shared_ptr&lt; System &gt; RegisterSystemExplicit(Func &amp;&amp;func, Signature signature={}, SystemStage stage=SystemStage::Update)</div><div class="ttdoc">Registers a system explicitly from a function object or lambda.</div><div class="ttdef"><b>Definition</b> world.hpp:147</div></div>
-<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_aca884c45f7653faecf43a5ade2d74b6e"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#aca884c45f7653faecf43a5ade2d74b6e">acheron::ecs::World::Import</a></div><div class="ttdeci">void Import()</div><div class="ttdoc">Imports a module into the world.</div><div class="ttdef"><b>Definition</b> world.hpp:223</div></div>
-<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_ad92190ea42b5c91706c1d7bbabd5fb29"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#ad92190ea42b5c91706c1d7bbabd5fb29">acheron::ecs::World::AddComponent</a></div><div class="ttdeci">void AddComponent(Entity entity, T component={})</div><div class="ttdoc">Adds a component to an entity.</div><div class="ttdef"><b>Definition</b> world.hpp:58</div></div>
-<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_ae5d6d3de474b2b651441a34086bb628a"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#ae5d6d3de474b2b651441a34086bb628a">acheron::ecs::World::GetComponent</a></div><div class="ttdeci">T &amp; GetComponent(Entity entity)</div><div class="ttdoc">Retrieves a reference to a component on an entity.</div><div class="ttdef"><b>Definition</b> world.hpp:94</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html">acheron::ecs::World</a></div><div class="ttdoc">Central context for the ECS.</div><div class="ttdef"><b>Definition</b> world.hpp:23</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a03369f030030055fb7ec8eaba39ba2ed"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a03369f030030055fb7ec8eaba39ba2ed">acheron::ecs::World::SetSystemSignature</a></div><div class="ttdeci">void SetSystemSignature(Signature signature)</div><div class="ttdoc">Sets the component signature for a system.</div><div class="ttdef"><b>Definition</b> world.hpp:193</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a06d359872a24da42f477a40edcfa1de0"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a06d359872a24da42f477a40edcfa1de0">acheron::ecs::World::AddComponent</a></div><div class="ttdeci">void AddComponent(Entity entity, Args &amp;&amp;... args)</div><div class="ttdoc">Adds a component to an entity.</div><div class="ttdef"><b>Definition</b> world.hpp:62</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a0b8f4974199c7620b93c3cff0ae57e47"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a0b8f4974199c7620b93c3cff0ae57e47">acheron::ecs::World::RemoveComponent</a></div><div class="ttdeci">void RemoveComponent(Entity entity)</div><div class="ttdoc">Removes a component from an entity.</div><div class="ttdef"><b>Definition</b> world.hpp:81</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a1d3754ff286be35491b089e43fb66aab"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a1d3754ff286be35491b089e43fb66aab">acheron::ecs::World::Despawn</a></div><div class="ttdeci">void Despawn(Entity entity)</div><div class="ttdoc">Despawns(destroys) an entity Cleans up all associated components and notifies systems.</div><div class="ttdef"><b>Definition</b> world.cpp:18</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a2d048c599dbede96b4e7681fb1f0e668"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a2d048c599dbede96b4e7681fb1f0e668">acheron::ecs::World::RegisterSystem</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; RegisterSystem(Signature signature={}, SystemStage stage=SystemStage::Update)</div><div class="ttdoc">Registers a system of type T.</div><div class="ttdef"><b>Definition</b> world.hpp:133</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a3b469d927ff15a3c699b74ad0b459f80"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a3b469d927ff15a3c699b74ad0b459f80">acheron::ecs::World::MakeSignature</a></div><div class="ttdeci">Signature MakeSignature()</div><div class="ttdoc">Creates a signature that includes all specified component types.</div><div class="ttdef"><b>Definition</b> world.hpp:118</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a53ce39e02c5e844d1a9b504e3aeaaf97"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a53ce39e02c5e844d1a9b504e3aeaaf97">acheron::ecs::World::RegisterSystem</a></div><div class="ttdeci">std::shared_ptr&lt; System &gt; RegisterSystem(Func &amp;&amp;func, SystemStage stage=SystemStage::Update)</div><div class="ttdoc">Registers a system from a lambda or callable with component type deduction.</div><div class="ttdef"><b>Definition</b> world.hpp:182</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a56e88c6870eb442bc25a5416d2777517"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a56e88c6870eb442bc25a5416d2777517">acheron::ecs::World::Spawn</a></div><div class="ttdeci">EntityBuilder Spawn()</div><div class="ttdoc">Spawns a new entity.</div><div class="ttdef"><b>Definition</b> world.cpp:14</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a5ff7de593e6aeb4a1e46f2e8b599127e"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a5ff7de593e6aeb4a1e46f2e8b599127e">acheron::ecs::World::SetSingleton</a></div><div class="ttdeci">void SetSingleton(T value)</div><div class="ttdoc">Stores a singleton instance in the world.</div><div class="ttdef"><b>Definition</b> world.hpp:203</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a71a31042aa7ece4ff32e46041e275d5f"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a71a31042aa7ece4ff32e46041e275d5f">acheron::ecs::World::RegisterComponent</a></div><div class="ttdeci">void RegisterComponent()</div><div class="ttdoc">Registers a new component type with the ECS.</div><div class="ttdef"><b>Definition</b> world.hpp:48</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_a9356f42f5cf216fa52ab2a8c4f24c86f"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#a9356f42f5cf216fa52ab2a8c4f24c86f">acheron::ecs::World::SubscribeEvent</a></div><div class="ttdeci">void SubscribeEvent(EventManager::Callback&lt; T &gt; cb)</div><div class="ttdoc">Subscribes a callback to an event.</div><div class="ttdef"><b>Definition</b> world.hpp:241</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_aa176fe32114061262149208f8500f1a5"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#aa176fe32114061262149208f8500f1a5">acheron::ecs::World::EmitEvent</a></div><div class="ttdeci">void EmitEvent(const T &amp;event)</div><div class="ttdoc">Emit an event to the event queue.</div><div class="ttdef"><b>Definition</b> world.hpp:252</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_aa4a99d0d379c54e5fb0996ef8fa54233"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#aa4a99d0d379c54e5fb0996ef8fa54233">acheron::ecs::World::GetSingleton</a></div><div class="ttdeci">T &amp; GetSingleton()</div><div class="ttdoc">Retrieves a singleton instance from the world.</div><div class="ttdef"><b>Definition</b> world.hpp:214</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_aa5394c06ec4e249fb103aabb805f8f04"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#aa5394c06ec4e249fb103aabb805f8f04">acheron::ecs::World::GetComponentID</a></div><div class="ttdeci">ComponentID GetComponentID()</div><div class="ttdoc">Retrieves the unique ID associated with a component type.</div><div class="ttdef"><b>Definition</b> world.hpp:108</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_ab254fa1af788e4a751dc2f8be843d04e"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#ab254fa1af788e4a751dc2f8be843d04e">acheron::ecs::World::RegisterSystemExplicit</a></div><div class="ttdeci">std::shared_ptr&lt; System &gt; RegisterSystemExplicit(Func &amp;&amp;func, Signature signature={}, SystemStage stage=SystemStage::Update)</div><div class="ttdoc">Registers a system explicitly from a function object or lambda.</div><div class="ttdef"><b>Definition</b> world.hpp:151</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_ac5ddcb89467217062403c1edc00c9125"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#ac5ddcb89467217062403c1edc00c9125">acheron::ecs::World::DispatchEvents</a></div><div class="ttdeci">void DispatchEvents()</div><div class="ttdoc">Dispatch events.</div><div class="ttdef"><b>Definition</b> world.hpp:259</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_aca884c45f7653faecf43a5ade2d74b6e"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#aca884c45f7653faecf43a5ade2d74b6e">acheron::ecs::World::Import</a></div><div class="ttdeci">void Import()</div><div class="ttdoc">Imports a module into the world.</div><div class="ttdef"><b>Definition</b> world.hpp:227</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_ae5d6d3de474b2b651441a34086bb628a"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#ae5d6d3de474b2b651441a34086bb628a">acheron::ecs::World::GetComponent</a></div><div class="ttdeci">T &amp; GetComponent(Entity entity)</div><div class="ttdoc">Retrieves a reference to a component on an entity.</div><div class="ttdef"><b>Definition</b> world.hpp:98</div></div>
 <div class="ttc" id="aclassacheron_1_1ecs_1_1World_html_afa39d4e6f714a7a3691ac0c656f5e8a8"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html#afa39d4e6f714a7a3691ac0c656f5e8a8">acheron::ecs::World::World</a></div><div class="ttdeci">World()</div><div class="ttdoc">Constructs a new World, initializing managers.</div><div class="ttdef"><b>Definition</b> world.cpp:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

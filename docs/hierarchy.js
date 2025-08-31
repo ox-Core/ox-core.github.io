@@ -1,7 +1,12 @@
 var hierarchy =
 [
+    [ "acheron::ecs::ComponentAdded< T >", "structacheron_1_1ecs_1_1ComponentAdded.html", null ],
     [ "acheron::ecs::ComponentManager", "classacheron_1_1ecs_1_1ComponentManager.html", null ],
+    [ "acheron::ecs::ComponentRemoved< T >", "structacheron_1_1ecs_1_1ComponentRemoved.html", null ],
+    [ "acheron::ecs::ComponentSet< T >", "structacheron_1_1ecs_1_1ComponentSet.html", null ],
+    [ "acheron::ecs::EntityBuilder", "classacheron_1_1ecs_1_1EntityBuilder.html", null ],
     [ "acheron::ecs::EntityManager", "classacheron_1_1ecs_1_1EntityManager.html", null ],
+    [ "acheron::ecs::EventManager", "classacheron_1_1ecs_1_1EventManager.html", null ],
     [ "acheron::ecs::IComponentArray", "structacheron_1_1ecs_1_1IComponentArray.html", [
       [ "acheron::ecs::ComponentArray< T >", "classacheron_1_1ecs_1_1ComponentArray.html", null ]
     ] ],

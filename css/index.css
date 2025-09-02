@@ -255,6 +255,14 @@ nav {
     transition: color 0.2s ease;
 }
 
+.nav-links a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
     .logo img {
         display: block;
         height: 2.2rem;

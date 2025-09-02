@@ -117,9 +117,13 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>World</b> ()</td></tr>
 <tr class="memdesc:afa39d4e6f714a7a3691ac0c656f5e8a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classacheron_1_1ecs_1_1World.html" title="Central context for the ECS.">World</a>, initializing managers. <br /></td></tr>
 <tr class="separator:afa39d4e6f714a7a3691ac0c656f5e8a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56e88c6870eb442bc25a5416d2777517" id="r_a56e88c6870eb442bc25a5416d2777517"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classacheron_1_1ecs_1_1EntityBuilder.html">EntityBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56e88c6870eb442bc25a5416d2777517">Spawn</a> ()</td></tr>
-<tr class="memdesc:a56e88c6870eb442bc25a5416d2777517"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a new entity.  <br /></td></tr>
-<tr class="separator:a56e88c6870eb442bc25a5416d2777517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d122dd9b2584e124677473a9773e0e" id="r_a92d122dd9b2584e124677473a9773e0e"><td class="memItemLeft" align="right" valign="top">Entity&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92d122dd9b2584e124677473a9773e0e">Spawn</a> ()</td></tr>
+<tr class="memdesc:a92d122dd9b2584e124677473a9773e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a new entity.  <br /></td></tr>
+<tr class="separator:a92d122dd9b2584e124677473a9773e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92ca06fa73142073a856de57a12b89ea" id="r_a92ca06fa73142073a856de57a12b89ea"><td class="memTemplParams" colspan="2">template&lt;typename... Cs, typename... Overrides&gt; </td></tr>
+<tr class="memitem:a92ca06fa73142073a856de57a12b89ea"><td class="memTemplItemLeft" align="right" valign="top">Entity&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a92ca06fa73142073a856de57a12b89ea">SpawnWith</a> (Overrides &amp;&amp;... overrides)</td></tr>
+<tr class="memdesc:a92ca06fa73142073a856de57a12b89ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns an entity with components.  <br /></td></tr>
+<tr class="separator:a92ca06fa73142073a856de57a12b89ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d3754ff286be35491b089e43fb66aab" id="r_a1d3754ff286be35491b089e43fb66aab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d3754ff286be35491b089e43fb66aab">Despawn</a> (Entity entity)</td></tr>
 <tr class="memdesc:a1d3754ff286be35491b089e43fb66aab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Despawns(destroys) an entity Cleans up all associated components and notifies systems.  <br /></td></tr>
 <tr class="separator:a1d3754ff286be35491b089e43fb66aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -810,14 +814,14 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="a56e88c6870eb442bc25a5416d2777517" name="a56e88c6870eb442bc25a5416d2777517"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56e88c6870eb442bc25a5416d2777517">&#9670;&#160;</a></span>Spawn()</h2>
+<a id="a92d122dd9b2584e124677473a9773e0e" name="a92d122dd9b2584e124677473a9773e0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92d122dd9b2584e124677473a9773e0e">&#9670;&#160;</a></span>Spawn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classacheron_1_1ecs_1_1EntityBuilder.html">EntityBuilder</a> World::Spawn </td>
+          <td class="memname">Entity World::Spawn </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -827,6 +831,56 @@ template&lt;typename T&gt; </div>
 
 <p>Spawns a new entity. </p>
 <dl class="section return"><dt>Returns</dt><dd>The newly created entity </dd></dl>
+
+</div>
+</div>
+<a id="a92ca06fa73142073a856de57a12b89ea" name="a92ca06fa73142073a856de57a12b89ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92ca06fa73142073a856de57a12b89ea">&#9670;&#160;</a></span>SpawnWith()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Cs, typename... Overrides&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Entity acheron::ecs::World::SpawnWith </td>
+          <td>(</td>
+          <td class="paramtype">Overrides &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>overrides</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Spawns an entity with components. </p>
+<p>Example: </p><div class="fragment"><div class="line">world.SpawnWith&lt;Player, Health&gt;(Health{20});</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Cs</td><td>Components that are to be added to the entity </td></tr>
+    <tr><td class="paramname">Overrides</td><td>The actual component data passed to the function </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">overrides</td><td>Same as the template parameter Overrides</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Static</td><td>Assert Fail if Overrides has a type Cs doesnt contain </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The newly created entity with the components specified </dd></dl>
 
 </div>
 </div>

@@ -5,6 +5,7 @@ var dir_ddca5f149c4ce13074f28b270e950ba9 =
     [ "entity.hpp", "entity_8hpp_source.html", null ],
     [ "event.hpp", "event_8hpp_source.html", null ],
     [ "module.hpp", "module_8hpp_source.html", null ],
+    [ "singleton.hpp", "singleton_8hpp_source.html", null ],
     [ "system.hpp", "system_8hpp_source.html", null ],
     [ "system_function.hpp", "system__function_8hpp_source.html", null ],
     [ "types.hpp", "types_8hpp_source.html", null ],

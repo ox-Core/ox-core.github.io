@@ -17,7 +17,8 @@ var classacheron_1_1ecs_1_1World =
     [ "RemoveComponent", "classacheron_1_1ecs_1_1World.html#a0b8f4974199c7620b93c3cff0ae57e47", null ],
     [ "SetSingleton", "classacheron_1_1ecs_1_1World.html#a5ff7de593e6aeb4a1e46f2e8b599127e", null ],
     [ "SetSystemSignature", "classacheron_1_1ecs_1_1World.html#a03369f030030055fb7ec8eaba39ba2ed", null ],
-    [ "Spawn", "classacheron_1_1ecs_1_1World.html#a56e88c6870eb442bc25a5416d2777517", null ],
+    [ "Spawn", "classacheron_1_1ecs_1_1World.html#a92d122dd9b2584e124677473a9773e0e", null ],
+    [ "SpawnWith", "classacheron_1_1ecs_1_1World.html#a92ca06fa73142073a856de57a12b89ea", null ],
     [ "SubscribeEvent", "classacheron_1_1ecs_1_1World.html#a9356f42f5cf216fa52ab2a8c4f24c86f", null ],
     [ "Update", "classacheron_1_1ecs_1_1World.html#a88b89f6d5123e42a0da9535bf04c1408", null ]
 ];

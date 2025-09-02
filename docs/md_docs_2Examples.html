@@ -153,9 +153,7 @@ Health</h1>
 <div class="line">    world.SetSingleton&lt;ShouldQuit&gt;({});</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// create a player entity and add the components on it</span></div>
-<div class="line">    world.Spawn()</div>
-<div class="line">        .Add&lt;Player&gt;()</div>
-<div class="line">        .Add&lt;Health&gt;(20.0);</div>
+<div class="line">    world.SpawnWith&lt;Player, Health&gt;(Health{20});</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// this returns a reference so when its changed it will update this, no need to call it every frame</span></div>
 <div class="line">    <span class="keyword">auto</span>&amp; shouldQuit = world.GetSingleton&lt;ShouldQuit&gt;();</div>
@@ -172,7 +170,7 @@ Health</h1>
 <div class="line">        world.Update(dt);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html">acheron::ecs::World</a></div><div class="ttdoc">Central context for the ECS.</div><div class="ttdef"><b>Definition</b> world.hpp:23</div></div>
+<div class="ttc" id="aclassacheron_1_1ecs_1_1World_html"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html">acheron::ecs::World</a></div><div class="ttdoc">Central context for the ECS.</div><div class="ttdef"><b>Definition</b> world.hpp:20</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

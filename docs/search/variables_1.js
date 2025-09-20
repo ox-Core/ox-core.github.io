@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['signatures_0',['signatures',['../classacheron_1_1ecs_1_1SystemManager.html#a8945193344479146e57ad294714afd8b',1,'acheron::ecs::SystemManager']]],
-  ['stagesystems_1',['stageSystems',['../classacheron_1_1ecs_1_1SystemManager.html#ade30c39f439f84eafb24aae5361ca33f',1,'acheron::ecs::SystemManager']]],
-  ['systems_2',['systems',['../classacheron_1_1ecs_1_1SystemManager.html#aab228be141342222f767e34f6c03ece0',1,'acheron::ecs::SystemManager']]]
+  ['height_0',['height',['../structacheron_1_1window_1_1WindowConfig.html#a3590500361a15b6fcd988347f165063e',1,'acheron::window::WindowConfig::height'],['../structacheron_1_1window_1_1Window.html#a32d49d8b4353b712b658811eb41bde1d',1,'acheron::window::Window::height']]]
 ];

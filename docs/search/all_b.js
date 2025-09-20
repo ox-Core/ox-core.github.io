@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['welcome_0',['Welcome',['../index.html',1,'']]],
-  ['world_1',['World',['../classacheron_1_1ecs_1_1World.html',1,'acheron::ecs::World'],['../classacheron_1_1ecs_1_1World.html#afa39d4e6f714a7a3691ac0c656f5e8a8',1,'acheron::ecs::World::World()']]]
+  ['populatestages_0',['PopulateStages',['../classacheron_1_1ecs_1_1SystemManager.html#a9ea50a57c2e4539a647326b269c848d8',1,'acheron::ecs::SystemManager']]]
 ];

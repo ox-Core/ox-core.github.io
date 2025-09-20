@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['welcome_0',['Welcome',['../index.html',1,'']]]
+  ['health_0',['Health',['../md_docs_2Examples.html#autotoc_md1',1,'']]]
 ];

@@ -1,9 +1,12 @@
 var searchData=
 [
-  ['get_0',['Get',['../classacheron_1_1ecs_1_1SingletonStorage.html#ae1381ab0a11d597283081e031048ee0c',1,'acheron::ecs::SingletonStorage']]],
-  ['getcomponent_1',['GetComponent',['../classacheron_1_1ecs_1_1ComponentManager.html#a4525e210538d162a2a6974e6e6dd7cb2',1,'acheron::ecs::ComponentManager::GetComponent()'],['../classacheron_1_1ecs_1_1World.html#ae5d6d3de474b2b651441a34086bb628a',1,'acheron::ecs::World::GetComponent()']]],
-  ['getcomponentid_2',['GetComponentID',['../classacheron_1_1ecs_1_1ComponentManager.html#a936d9c27a47be3970e8fbda01ea1a6e2',1,'acheron::ecs::ComponentManager::GetComponentID()'],['../classacheron_1_1ecs_1_1World.html#aa5394c06ec4e249fb103aabb805f8f04',1,'acheron::ecs::World::GetComponentID()']]],
-  ['getdata_3',['GetData',['../classacheron_1_1ecs_1_1ComponentArray.html#a151b5b222a7957d4f86cb21a11a92e34',1,'acheron::ecs::ComponentArray']]],
-  ['getsignature_4',['GetSignature',['../classacheron_1_1ecs_1_1EntityManager.html#a1efb5b7374faa8fb18b67a3a53f5ac7e',1,'acheron::ecs::EntityManager']]],
-  ['getsingleton_5',['GetSingleton',['../classacheron_1_1ecs_1_1World.html#aa4a99d0d379c54e5fb0996ef8fa54233',1,'acheron::ecs::World']]]
+  ['edges_0',['edges',['../classacheron_1_1ecs_1_1SystemManager.html#a654c985d9bf6f9f92bcfdd62a887f9a3',1,'acheron::ecs::SystemManager']]],
+  ['emit_1',['Emit',['../classacheron_1_1ecs_1_1EventManager.html#a8e9d58744a7928531b374d5bdb4177f9',1,'acheron::ecs::EventManager']]],
+  ['emitevent_2',['EmitEvent',['../classacheron_1_1ecs_1_1World.html#aa176fe32114061262149208f8500f1a5',1,'acheron::ecs::World']]],
+  ['entities_3',['entities',['../classacheron_1_1ecs_1_1System.html#ac411bd9e6451d4c7985c2cf6aea4d1eb',1,'acheron::ecs::System']]],
+  ['entitydespawned_4',['EntityDespawned',['../classacheron_1_1ecs_1_1ComponentManager.html#a93d2668e870afb66b16d1c3516245f8a',1,'acheron::ecs::ComponentManager::EntityDespawned()'],['../structacheron_1_1ecs_1_1IComponentArray.html#a19c0db0c269c1c9b97bef5f6b1ef842c',1,'acheron::ecs::IComponentArray::EntityDespawned()'],['../classacheron_1_1ecs_1_1ComponentArray.html#aa23110bef43fa1cebfef37bc3a158472',1,'acheron::ecs::ComponentArray::EntityDespawned()'],['../classacheron_1_1ecs_1_1SystemManager.html#ab7dfbf4492ce2a9952b8a18b479199c1',1,'acheron::ecs::SystemManager::EntityDespawned()']]],
+  ['entitymanager_5',['EntityManager',['../classacheron_1_1ecs_1_1EntityManager.html',1,'acheron::ecs']]],
+  ['entitysignaturechanged_6',['EntitySignatureChanged',['../classacheron_1_1ecs_1_1SystemManager.html#ad2f0f3d21774a85ba14f00ed10b8b11c',1,'acheron::ecs::SystemManager']]],
+  ['eventmanager_7',['EventManager',['../classacheron_1_1ecs_1_1EventManager.html',1,'acheron::ecs']]],
+  ['examples_8',['Examples',['../md_docs_2Examples.html',1,'']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['icomponentarray_0',['IComponentArray',['../structacheron_1_1ecs_1_1IComponentArray.html',1,'acheron::ecs']]]
+  ['entitymanager_0',['EntityManager',['../classacheron_1_1ecs_1_1EntityManager.html',1,'acheron::ecs']]],
+  ['eventmanager_1',['EventManager',['../classacheron_1_1ecs_1_1EventManager.html',1,'acheron::ecs']]]
 ];

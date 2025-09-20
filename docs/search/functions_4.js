@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['import_0',['Import',['../classacheron_1_1ecs_1_1World.html#aca884c45f7653faecf43a5ade2d74b6e',1,'acheron::ecs::World']]],
-  ['insertdata_1',['InsertData',['../classacheron_1_1ecs_1_1ComponentArray.html#a256222c8a8bbe952e949f6a85d0781bd',1,'acheron::ecs::ComponentArray']]]
+  ['hascomponent_0',['HasComponent',['../classacheron_1_1ecs_1_1ComponentManager.html#a628f74b15a08b5444ac4373f45a13226',1,'acheron::ecs::ComponentManager::HasComponent()'],['../classacheron_1_1ecs_1_1World.html#ae31107d9b17332e2cdcbd818bf20fe22',1,'acheron::ecs::World::HasComponent()']]],
+  ['hasdata_1',['HasData',['../classacheron_1_1ecs_1_1ComponentArray.html#a9114341b232d354c30c0363ac99e6563',1,'acheron::ecs::ComponentArray']]]
 ];

@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['emit_0',['Emit',['../classacheron_1_1ecs_1_1EventManager.html#a8e9d58744a7928531b374d5bdb4177f9',1,'acheron::ecs::EventManager']]],
-  ['emitevent_1',['EmitEvent',['../classacheron_1_1ecs_1_1World.html#aa176fe32114061262149208f8500f1a5',1,'acheron::ecs::World']]],
-  ['entities_2',['entities',['../classacheron_1_1ecs_1_1System.html#ac411bd9e6451d4c7985c2cf6aea4d1eb',1,'acheron::ecs::System']]],
-  ['entitydespawned_3',['EntityDespawned',['../classacheron_1_1ecs_1_1ComponentManager.html#a93d2668e870afb66b16d1c3516245f8a',1,'acheron::ecs::ComponentManager::EntityDespawned()'],['../structacheron_1_1ecs_1_1IComponentArray.html#a19c0db0c269c1c9b97bef5f6b1ef842c',1,'acheron::ecs::IComponentArray::EntityDespawned()'],['../classacheron_1_1ecs_1_1ComponentArray.html#aa23110bef43fa1cebfef37bc3a158472',1,'acheron::ecs::ComponentArray::EntityDespawned()'],['../classacheron_1_1ecs_1_1SystemManager.html#ab7dfbf4492ce2a9952b8a18b479199c1',1,'acheron::ecs::SystemManager::EntityDespawned()']]],
-  ['entitymanager_4',['EntityManager',['../classacheron_1_1ecs_1_1EntityManager.html',1,'acheron::ecs']]],
-  ['entitysignaturechanged_5',['EntitySignatureChanged',['../classacheron_1_1ecs_1_1SystemManager.html#ad2f0f3d21774a85ba14f00ed10b8b11c',1,'acheron::ecs::SystemManager']]],
-  ['eventmanager_6',['EventManager',['../classacheron_1_1ecs_1_1EventManager.html',1,'acheron::ecs']]],
-  ['examples_7',['Examples',['../md_docs_2Examples.html',1,'']]]
+  ['despawn_0',['Despawn',['../classacheron_1_1ecs_1_1EntityManager.html#a3d07f23aaf6d2d4c8d5383cea1303f56',1,'acheron::ecs::EntityManager::Despawn()'],['../classacheron_1_1ecs_1_1World.html#a1d3754ff286be35491b089e43fb66aab',1,'acheron::ecs::World::Despawn()']]],
+  ['dispatch_1',['Dispatch',['../classacheron_1_1ecs_1_1EventManager.html#a551b72623527e30537fb86360da7d70c',1,'acheron::ecs::EventManager']]],
+  ['dispatchevents_2',['DispatchEvents',['../classacheron_1_1ecs_1_1World.html#ac5ddcb89467217062403c1edc00c9125',1,'acheron::ecs::World']]]
 ];

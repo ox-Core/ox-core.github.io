@@ -94,25 +94,155 @@ $(function(){initNavTree('structacheron_1_1renderer_1_1Shader.html','','structac
   <div class="headertitle"><div class="title">acheron::renderer::Shader Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Wrapper for OpenGL shaders.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="shader_8hpp_source.html">shader.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8136fc07517f0ac1a9551afd5dd59f9a" id="r_a8136fc07517f0ac1a9551afd5dd59f9a"><td class="memItemLeft" align="right" valign="top"><a id="a8136fc07517f0ac1a9551afd5dd59f9a" name="a8136fc07517f0ac1a9551afd5dd59f9a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Compile</b> (std::string vsSrc, std::string fsSrc)</td></tr>
+<tr class="memitem:a8136fc07517f0ac1a9551afd5dd59f9a" id="r_a8136fc07517f0ac1a9551afd5dd59f9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8136fc07517f0ac1a9551afd5dd59f9a">Compile</a> (std::string vsSrc, std::string fsSrc)</td></tr>
+<tr class="memdesc:a8136fc07517f0ac1a9551afd5dd59f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile a shader with the source.  <br /></td></tr>
 <tr class="memitem:aca050e1e0a0e2c278f9c34d34d068e87" id="r_aca050e1e0a0e2c278f9c34d34d068e87"><td class="memItemLeft" align="right" valign="top"><a id="aca050e1e0a0e2c278f9c34d34d068e87" name="aca050e1e0a0e2c278f9c34d34d068e87"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Bind</b> ()</td></tr>
-<tr class="memitem:aee01a8e7eb79af4eab86caf64a92db6c" id="r_aee01a8e7eb79af4eab86caf64a92db6c"><td class="memItemLeft" align="right" valign="top"><a id="aee01a8e7eb79af4eab86caf64a92db6c" name="aee01a8e7eb79af4eab86caf64a92db6c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetUniform</b> (const char *name, float value[4])</td></tr>
-<tr class="memitem:abcd5a057047831bbc90ce6012c1a74c9" id="r_abcd5a057047831bbc90ce6012c1a74c9"><td class="memItemLeft" align="right" valign="top"><a id="abcd5a057047831bbc90ce6012c1a74c9" name="abcd5a057047831bbc90ce6012c1a74c9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetUniformMat4</b> (const char *name, const float mat[16]) const</td></tr>
+<tr class="memdesc:aca050e1e0a0e2c278f9c34d34d068e87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind the shader. <br /></td></tr>
+<tr class="memitem:aee01a8e7eb79af4eab86caf64a92db6c" id="r_aee01a8e7eb79af4eab86caf64a92db6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee01a8e7eb79af4eab86caf64a92db6c">SetUniform</a> (const char *name, float value[4])</td></tr>
+<tr class="memdesc:aee01a8e7eb79af4eab86caf64a92db6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a vec4 uniform.  <br /></td></tr>
+<tr class="memitem:abcd5a057047831bbc90ce6012c1a74c9" id="r_abcd5a057047831bbc90ce6012c1a74c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcd5a057047831bbc90ce6012c1a74c9">SetUniformMat4</a> (const char *name, const float mat[16]) const</td></tr>
+<tr class="memdesc:abcd5a057047831bbc90ce6012c1a74c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a mat4 uniform.  <br /></td></tr>
 <tr class="memitem:ad7105fb2c338bc4a03148ef5d7604645" id="r_ad7105fb2c338bc4a03148ef5d7604645"><td class="memItemLeft" align="right" valign="top"><a id="ad7105fb2c338bc4a03148ef5d7604645" name="ad7105fb2c338bc4a03148ef5d7604645"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsCompiled</b> ()</td></tr>
+<tr class="memdesc:ad7105fb2c338bc4a03148ef5d7604645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if the <a class="el" href="structacheron_1_1renderer_1_1Shader.html" title="Wrapper for OpenGL shaders.">Shader</a> was compiled. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aa65c268805a3377abdf8468f6ff42626" id="r_aa65c268805a3377abdf8468f6ff42626"><td class="memItemLeft" align="right" valign="top"><a id="aa65c268805a3377abdf8468f6ff42626" name="aa65c268805a3377abdf8468f6ff42626"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Wrapper for OpenGL shaders. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a8136fc07517f0ac1a9551afd5dd59f9a" name="a8136fc07517f0ac1a9551afd5dd59f9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8136fc07517f0ac1a9551afd5dd59f9a">&#9670;&#160;</a></span>Compile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void acheron::renderer::Shader::Compile </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>vsSrc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>fsSrc</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compile a shader with the source. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vsSrc</td><td>Vertex <a class="el" href="structacheron_1_1renderer_1_1Shader.html" title="Wrapper for OpenGL shaders.">Shader</a> Source </td></tr>
+    <tr><td class="paramname">fsSrc</td><td>Fragment <a class="el" href="structacheron_1_1renderer_1_1Shader.html" title="Wrapper for OpenGL shaders.">Shader</a> Source</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Runtime</td><td>erorr if shader didnt compile properly </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aee01a8e7eb79af4eab86caf64a92db6c" name="aee01a8e7eb79af4eab86caf64a92db6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee01a8e7eb79af4eab86caf64a92db6c">&#9670;&#160;</a></span>SetUniform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void acheron::renderer::Shader::SetUniform </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>value</em></span>[4]&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets a vec4 uniform. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the uniform </td></tr>
+    <tr><td class="paramname">value</td><td>Value of the uniform </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abcd5a057047831bbc90ce6012c1a74c9" name="abcd5a057047831bbc90ce6012c1a74c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcd5a057047831bbc90ce6012c1a74c9">&#9670;&#160;</a></span>SetUniformMat4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void acheron::renderer::Shader::SetUniformMat4 </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>mat</em></span>[16]&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set a mat4 uniform. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the uniform </td></tr>
+    <tr><td class="paramname">value</td><td>Value of the uniform </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/modules/renderer/<a class="el" href="shader_8hpp_source.html">shader.hpp</a></li>
 </ul>

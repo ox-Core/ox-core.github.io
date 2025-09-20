@@ -1,9 +1,4 @@
 var searchData=
 [
-  ['register_0',['Register',['../structacheron_1_1ecs_1_1Module.html#aad8e7b8974ac90dd129472b69a4b78a9',1,'acheron::ecs::Module::Register()'],['../structacheron_1_1renderer_1_1RendererModule.html#acd7099070dbb86b73115c7dc043d26ea',1,'acheron::renderer::RendererModule::Register()'],['../structacheron_1_1window_1_1WindowModule.html#a7e907cb8535a55057f08e5e58fa6119d',1,'acheron::window::WindowModule::Register()']]],
-  ['registercomponent_1',['RegisterComponent',['../classacheron_1_1ecs_1_1ComponentManager.html#a818631a256e1d943e86578c882c6017b',1,'acheron::ecs::ComponentManager::RegisterComponent()'],['../classacheron_1_1ecs_1_1World.html#a71a31042aa7ece4ff32e46041e275d5f',1,'acheron::ecs::World::RegisterComponent()']]],
-  ['registersystem_2',['RegisterSystem',['../classacheron_1_1ecs_1_1SystemManager.html#a8c7dea00a590cc654c9f014261b8b869',1,'acheron::ecs::SystemManager::RegisterSystem()'],['../classacheron_1_1ecs_1_1World.html#af061e0a7420bcf396d7568b499a9fab2',1,'acheron::ecs::World::RegisterSystem(Signature signature={}, std::string stage=&quot;Update&quot;)'],['../classacheron_1_1ecs_1_1World.html#a561eb0a52ca756c0c8e2a880a733955e',1,'acheron::ecs::World::RegisterSystem(Func &amp;&amp;func, std::string stage=&quot;Update&quot;)']]],
-  ['registersystemexplicit_3',['RegisterSystemExplicit',['../classacheron_1_1ecs_1_1World.html#a3540b75ed58669191d5ca86025cb28f8',1,'acheron::ecs::World']]],
-  ['removecomponent_4',['RemoveComponent',['../classacheron_1_1ecs_1_1ComponentManager.html#a102dddd4079ae928554a910c296bf3bc',1,'acheron::ecs::ComponentManager::RemoveComponent()'],['../classacheron_1_1ecs_1_1World.html#a0b8f4974199c7620b93c3cff0ae57e47',1,'acheron::ecs::World::RemoveComponent()']]],
-  ['removedata_5',['RemoveData',['../classacheron_1_1ecs_1_1ComponentArray.html#ab11d1baae1b70ead26a6818532360fd2',1,'acheron::ecs::ComponentArray']]]
+  ['makesignature_0',['MakeSignature',['../classacheron_1_1ecs_1_1World.html#a3b469d927ff15a3c699b74ad0b459f80',1,'acheron::ecs::World']]]
 ];

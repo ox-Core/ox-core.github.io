@@ -94,13 +94,20 @@ $(function(){initNavTree('structacheron_1_1renderer_1_1shaders_1_1BasicShader.ht
   <div class="headertitle"><div class="title">acheron::renderer::shaders::BasicShader Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Basic shader for rendering meshes.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="modules_2renderer_2shaders_2basic_8hpp_source.html">basic.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:aa718ccc82ca23eb696ebad7583928c5d" id="r_aa718ccc82ca23eb696ebad7583928c5d"><td class="memItemLeft" align="right" valign="top">static constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa718ccc82ca23eb696ebad7583928c5d">vertex</a></td></tr>
 <tr class="memitem:a504f8ec9ec9b66396be213cc6df13196" id="r_a504f8ec9ec9b66396be213cc6df13196"><td class="memItemLeft" align="right" valign="top">static constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a504f8ec9ec9b66396be213cc6df13196">fragment</a></td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Basic shader for rendering meshes. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a504f8ec9ec9b66396be213cc6df13196" name="a504f8ec9ec9b66396be213cc6df13196"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a504f8ec9ec9b66396be213cc6df13196">&#9670;&#160;</a></span>fragment</h2>
 
@@ -157,7 +164,7 @@ Static Public Attributes</h2></td></tr>
 <div class="line"><span class="stringliteral">layout (location = 0) in vec3 aPos;</span></div>
 <div class="line"><span class="stringliteral"></span> </div>
 <div class="line"><span class="stringliteral">uniform mat4 u_Model;</span></div>
-<div class="line"><span class="stringliteral">uniform mat4 u_ViewProj; // camera transform (for now, just identity)</span></div>
+<div class="line"><span class="stringliteral">uniform mat4 u_ViewProj;</span></div>
 <div class="line"><span class="stringliteral"></span> </div>
 <div class="line"><span class="stringliteral">void main() {</span></div>
 <div class="line"><span class="stringliteral">    gl_Position = u_ViewProj * u_Model * vec4(aPos, 1.0);</span></div>

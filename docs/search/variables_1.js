@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['height_0',['height',['../structacheron_1_1window_1_1WindowConfig.html#a3590500361a15b6fcd988347f165063e',1,'acheron::window::WindowConfig::height'],['../structacheron_1_1window_1_1Window.html#a32d49d8b4353b712b658811eb41bde1d',1,'acheron::window::Window::height']]]
+  ['color_0',['color',['../structacheron_1_1renderer_1_1Material.html#a78537121a195d8201681ab44f5b6fdf5',1,'acheron::renderer::Material::color'],['../structacheron_1_1renderer_1_1RenderableQuad.html#ac391aa5116b285104bb41d552309588f',1,'acheron::renderer::RenderableQuad::color']]]
 ];

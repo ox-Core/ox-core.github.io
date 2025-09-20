@@ -102,18 +102,20 @@ $(function(){initNavTree('quad_8hpp_source.html','',''); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;acheron.hpp&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>acheron::renderer {</div>
-<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="structacheron_1_1renderer_1_1RenderableQuad.html">    9</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structacheron_1_1renderer_1_1RenderableQuad.html">RenderableQuad</a> {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keywordtype">float</span> width, height;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <a class="code hl_struct" href="structacheron_1_1Color.html">Color</a> color = <a class="code hl_struct" href="structacheron_1_1Color.html">Color</a>(0xffffffff);</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    };</div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structacheron_1_1renderer_1_1RenderableQuad.html">   12</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structacheron_1_1renderer_1_1RenderableQuad.html">RenderableQuad</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structacheron_1_1renderer_1_1RenderableQuad.html#ae22c6cdbe4e0d2078b2b8590a3d86e76">   13</a></span>        <span class="keywordtype">float</span> width, <a class="code hl_variable" href="structacheron_1_1renderer_1_1RenderableQuad.html#ae22c6cdbe4e0d2078b2b8590a3d86e76">height</a>; </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structacheron_1_1renderer_1_1RenderableQuad.html#ac391aa5116b285104bb41d552309588f">   14</a></span>        <a class="code hl_struct" href="structacheron_1_1Color.html">Color</a> <a class="code hl_variable" href="structacheron_1_1renderer_1_1RenderableQuad.html#ac391aa5116b285104bb41d552309588f">color</a> = <a class="code hl_struct" href="structacheron_1_1Color.html">Color</a>(0xffffffff); </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    };</div>
 </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> QuadToMeshSystem(<a class="code hl_class" href="classacheron_1_1ecs_1_1World.html">ecs::World</a>&amp; world, ecs::Entity entity);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> QuadToMeshSystem(<a class="code hl_class" href="classacheron_1_1ecs_1_1World.html">ecs::World</a>&amp; world, ecs::Entity entity);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
 <div class="ttc" id="aclassacheron_1_1ecs_1_1World_html"><div class="ttname"><a href="classacheron_1_1ecs_1_1World.html">acheron::ecs::World</a></div><div class="ttdoc">Central context for the ECS.</div><div class="ttdef"><b>Definition</b> world.hpp:20</div></div>
-<div class="ttc" id="astructacheron_1_1Color_html"><div class="ttname"><a href="structacheron_1_1Color.html">acheron::Color</a></div><div class="ttdef"><b>Definition</b> basic.hpp:8</div></div>
-<div class="ttc" id="astructacheron_1_1renderer_1_1RenderableQuad_html"><div class="ttname"><a href="structacheron_1_1renderer_1_1RenderableQuad.html">acheron::renderer::RenderableQuad</a></div><div class="ttdef"><b>Definition</b> quad.hpp:9</div></div>
+<div class="ttc" id="astructacheron_1_1Color_html"><div class="ttname"><a href="structacheron_1_1Color.html">acheron::Color</a></div><div class="ttdoc">Color struct.</div><div class="ttdef"><b>Definition</b> basic.hpp:11</div></div>
+<div class="ttc" id="astructacheron_1_1renderer_1_1RenderableQuad_html"><div class="ttname"><a href="structacheron_1_1renderer_1_1RenderableQuad.html">acheron::renderer::RenderableQuad</a></div><div class="ttdoc">Component for creating Quads to be rendered.</div><div class="ttdef"><b>Definition</b> quad.hpp:12</div></div>
+<div class="ttc" id="astructacheron_1_1renderer_1_1RenderableQuad_html_ac391aa5116b285104bb41d552309588f"><div class="ttname"><a href="structacheron_1_1renderer_1_1RenderableQuad.html#ac391aa5116b285104bb41d552309588f">acheron::renderer::RenderableQuad::color</a></div><div class="ttdeci">Color color</div><div class="ttdoc">Color of the quad, will set the materials color.</div><div class="ttdef"><b>Definition</b> quad.hpp:14</div></div>
+<div class="ttc" id="astructacheron_1_1renderer_1_1RenderableQuad_html_ae22c6cdbe4e0d2078b2b8590a3d86e76"><div class="ttname"><a href="structacheron_1_1renderer_1_1RenderableQuad.html#ae22c6cdbe4e0d2078b2b8590a3d86e76">acheron::renderer::RenderableQuad::height</a></div><div class="ttdeci">float height</div><div class="ttdoc">Dimensions of the quad.</div><div class="ttdef"><b>Definition</b> quad.hpp:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

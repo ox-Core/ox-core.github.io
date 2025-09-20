@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['import_0',['Import',['../classacheron_1_1ecs_1_1World.html#aca884c45f7653faecf43a5ade2d74b6e',1,'acheron::ecs::World']]],
-  ['insertdata_1',['InsertData',['../classacheron_1_1ecs_1_1ComponentArray.html#a256222c8a8bbe952e949f6a85d0781bd',1,'acheron::ecs::ComponentArray']]],
-  ['isset_2',['IsSet',['../classacheron_1_1ecs_1_1SingletonStorage.html#a86919901be0f22d2a43e67e7a559e7cd',1,'acheron::ecs::SingletonStorage']]],
-  ['issingletonset_3',['IsSingletonSet',['../classacheron_1_1ecs_1_1World.html#ab9841510107f2cb77d90621f9b722b3c',1,'acheron::ecs::World']]]
+  ['get_0',['Get',['../classacheron_1_1ecs_1_1SingletonStorage.html#ae1381ab0a11d597283081e031048ee0c',1,'acheron::ecs::SingletonStorage']]],
+  ['getcomponent_1',['GetComponent',['../classacheron_1_1ecs_1_1ComponentManager.html#a4525e210538d162a2a6974e6e6dd7cb2',1,'acheron::ecs::ComponentManager::GetComponent()'],['../classacheron_1_1ecs_1_1World.html#ae5d6d3de474b2b651441a34086bb628a',1,'acheron::ecs::World::GetComponent()']]],
+  ['getcomponentid_2',['GetComponentID',['../classacheron_1_1ecs_1_1ComponentManager.html#a936d9c27a47be3970e8fbda01ea1a6e2',1,'acheron::ecs::ComponentManager::GetComponentID()'],['../classacheron_1_1ecs_1_1World.html#aa5394c06ec4e249fb103aabb805f8f04',1,'acheron::ecs::World::GetComponentID()']]],
+  ['getdata_3',['GetData',['../classacheron_1_1ecs_1_1ComponentArray.html#a151b5b222a7957d4f86cb21a11a92e34',1,'acheron::ecs::ComponentArray']]],
+  ['getorcreatestage_4',['GetOrCreateStage',['../classacheron_1_1ecs_1_1SystemManager.html#a535b8f47a94c196028ccc4aa4a586d29',1,'acheron::ecs::SystemManager']]],
+  ['getsignature_5',['GetSignature',['../classacheron_1_1ecs_1_1EntityManager.html#a1efb5b7374faa8fb18b67a3a53f5ac7e',1,'acheron::ecs::EntityManager']]],
+  ['getsingleton_6',['GetSingleton',['../classacheron_1_1ecs_1_1World.html#aa4a99d0d379c54e5fb0996ef8fa54233',1,'acheron::ecs::World']]],
+  ['getstageorfail_7',['GetStageOrFail',['../classacheron_1_1ecs_1_1SystemManager.html#a3bc748b3eeeaaabc49effdfaf4d060da',1,'acheron::ecs::SystemManager']]]
 ];

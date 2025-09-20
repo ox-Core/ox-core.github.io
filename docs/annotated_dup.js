@@ -26,14 +26,14 @@ var annotated_dup =
         ] ],
         [ "ClearColor", "structacheron_1_1renderer_1_1ClearColor.html", null ],
         [ "InstancedMesh2D", "structacheron_1_1renderer_1_1InstancedMesh2D.html", null ],
-        [ "Material", "structacheron_1_1renderer_1_1Material.html", null ],
-        [ "Mesh", "structacheron_1_1renderer_1_1Mesh.html", null ],
+        [ "Material", "structacheron_1_1renderer_1_1Material.html", "structacheron_1_1renderer_1_1Material" ],
+        [ "Mesh", "structacheron_1_1renderer_1_1Mesh.html", "structacheron_1_1renderer_1_1Mesh" ],
         [ "Mesh2D", "structacheron_1_1renderer_1_1Mesh2D.html", null ],
         [ "Mesh3D", "structacheron_1_1renderer_1_1Mesh3D.html", null ],
-        [ "RenderableQuad", "structacheron_1_1renderer_1_1RenderableQuad.html", null ],
-        [ "Renderer", "structacheron_1_1renderer_1_1Renderer.html", null ],
+        [ "RenderableQuad", "structacheron_1_1renderer_1_1RenderableQuad.html", "structacheron_1_1renderer_1_1RenderableQuad" ],
+        [ "Renderer", "structacheron_1_1renderer_1_1Renderer.html", "structacheron_1_1renderer_1_1Renderer" ],
         [ "RendererModule", "structacheron_1_1renderer_1_1RendererModule.html", "structacheron_1_1renderer_1_1RendererModule" ],
-        [ "Shader", "structacheron_1_1renderer_1_1Shader.html", null ]
+        [ "Shader", "structacheron_1_1renderer_1_1Shader.html", "structacheron_1_1renderer_1_1Shader" ]
       ] ],
       [ "window", null, [
         [ "Window", "structacheron_1_1window_1_1Window.html", "structacheron_1_1window_1_1Window" ],
